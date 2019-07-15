@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+.imgs{
+	height: 70px;
+	width:70px;
+	border-radius: 100%;
+}
+.reg{
+	display: none;
+}
+.login_form{
+	display: none;
+}
+.pic{
+	height: 80%;
+	width: 80%;
+	background-size: cover;
+	border-radius: 100%;
+}
+
