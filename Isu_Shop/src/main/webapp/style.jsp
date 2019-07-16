@@ -1,5 +1,10 @@
 
 <style type="text/css">
+*{
+	padding: 0;
+	box-sizing: border-box;
+}
+
 	.imgs{
 	height: 50px;
 	width:50px;
@@ -36,29 +41,22 @@
 	border-radius: 100px;
 	border-color: white;
 }
-.showPic{
-    display:none;
-	z-index:102;
-	top:0px;
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-}
+
 .fullimg{
 	
-	position:absolute;
-	height: 80%;
-	width: 70%;
+	height: 100%;
+	width: 100%;
 	background-size: cover;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.9);
+	
 
+}
+.modal_p_fullimg{
+	border-radius: 10px;
 }
 #jum{
 background-color: black;
+font-family: cursive;
+font-size: 14px;
 }
 .j-con{
 background-color: #222;
@@ -70,6 +68,15 @@ h4.heddddd{
 
 
 /* account start */
+.Account_img_full{
+	width: 80%;
+	height: auto;
+}
+.Account_img{
+	height: 100%;
+	width: 100%;
+	box-shadow: 2px 2px 2px 2px #333;
+}
 .prof-img{
 		height:300px !important;
 		width:300px !important;

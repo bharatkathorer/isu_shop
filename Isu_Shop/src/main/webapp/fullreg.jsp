@@ -20,12 +20,15 @@
 				<div class="form-group">
 					<h2 class="text-center text-primary">Complete Your Registration</h2>
 				</div>
-				<div class="form-group">
-					<label for="img">Profile Picture</label><br>
-					
-						<input type="file" name="img" multiple="multiple" >
-					
-				</div>
+				
+				
+				
+				<label for="img">Profile Picture</label><br>
+    <div class="custom-file mb-3">
+      <input type="file" class="custom-file-input" id="img" name="img">
+      <label class="custom-file-label" for="customFile" multiple="multiple" >Choose Profile Picture</label>
+    </div>
+    
 				<div class="form-group">
 					<label for="address">Address</label>
 					<textarea name="address" id="address" class="form-control" placeholder="Address"></textarea>			

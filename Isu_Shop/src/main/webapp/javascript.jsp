@@ -18,10 +18,20 @@
 	
 });
 	
-	function showImg(img){
+	function show_product_Img(img){
 		var i="ProductImg?id="+img;
-		$('.fullimg').attr('src', i);
-		$('.showPic').css('display', 'block');
+		$('#show_p_img').modal(1);
+		$('.p_fullimg').attr('src', i);
+	
+	}
+	
+	function show_account_Img(){
+		var aimg=$('#u_id').val();
+	
+		var i="ProfileDisplay?email="+aimg;
+		$('#show_p_img').modal(1);
+		$('.p_fullimg').attr('src', i);
+	
 	}
 
 	
@@ -226,7 +236,7 @@
 						},
 
 						success:function(data,sta){
-							alert(sta);
+							
 						}
 
 
@@ -250,7 +260,7 @@
 				},
 
 				success:function(data,sta){
-					alert(sta);
+					
 				}
 
 

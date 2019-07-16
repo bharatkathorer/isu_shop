@@ -10,15 +10,15 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<div class="card card-body">
+		
 			<div class="row d-flex justify-content-center">
-				<input type="hidden" id="u_id" value="${email}">
+				<input type="hidden" id="u_id" value="${user.getEmail()}">
 				<c:forEach items="${product}" var="pro">
 					<input type="hidden" id="${pro.getId()}cart" value="0">
 
-					<div class="card col-xl-3 col-lg-3 col-md-6 col-sm-6 col-10 ">
-						<div class="card-header">
-							<strong>${pro.getP_name()}</strong>
+					<div class="card col-xl-3 col-lg-3 col-md-6 col-sm-6 col-10 mb-1">
+						<div class="card-header bg-white">
+							<strong class="text-primary text-capitalize">${pro.getP_name()}</strong>
 						</div>
 
 						<div class="card-body">
@@ -33,7 +33,7 @@
 
 							</div>
 
-							<span onclick="showImg(${pro.getId()})"><img
+							<span onclick="show_product_Img(${pro.getId()})"><img
 								src="ProductImg?id=${pro.getId()}" alt="Plese Login" class="img">
 							</span>
 
@@ -66,7 +66,7 @@
 							</div>
 						</div>
 						<div
-							class="card-footer d-flex justify-content-center justify-content-around">
+							class="card-footer d-flex justify-content-center justify-content-around bg-white">
 
 							<button class="btn text-white btn-warning ml-2" title="Buy">Buy
 								Item</button>
@@ -74,14 +74,10 @@
 					</div>
 				</c:forEach>
 
-			</div>
+			
 		</div>
 	</div>
-	<div class="showPic">
-		<a class="close mt-1 m-r-5 p-5 text-white" id="c_img">&times;
-			Close</a> <img src="" alt="something went to wrong" class="fullimg">gfsd
-
-	</div>
+	
 
 
 </body>

@@ -10,7 +10,7 @@
 <%@include file="style.jsp" %>
 
 </head>
-<body>
+<body onload="prodctsss()">
 <%@include file="navbar.jsp"%>
 <%@include file="models.jsp"%>
 	<br>

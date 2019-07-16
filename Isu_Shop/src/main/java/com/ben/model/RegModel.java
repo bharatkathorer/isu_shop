@@ -1,9 +1,18 @@
 package com.ben.model;
 
+import java.util.Arrays;
+
 import javax.servlet.http.Part;
 
 public class RegModel {
 	
+	@Override
+	public String toString() {
+		return "RegModel [id=" + id + ", user_id=" + user_id + ", fname=" + fname + ", mname=" + mname + ", lname="
+				+ lname + ", email=" + email + ", password=" + password + ", p_pic=" + p_pic + ", address=" + address
+				+ ", pincode=" + pincode + ", state=" + state + ", city=" + city + ", phone=" + phone + ", profile_Pic="
+				+ Arrays.toString(profile_Pic) + "]";
+	}
 	private int id,user_id;
 	private String fname,mname,lname,email,password;
 	private Part p_pic;

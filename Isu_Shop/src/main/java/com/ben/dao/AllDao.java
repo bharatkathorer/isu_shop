@@ -82,7 +82,40 @@ public class AllDao {
 
 		return false;
 	}
-
+	
+	
+	public RegModel getName(String email) throws SQLException {
+		RegModel rm=new RegModel();
+		pst = con.prepareStatement("select * from user where email=?");
+		pst.setString(1, email);
+		rs=pst.executeQuery();
+		while(rs.next()) {
+			
+			rm=fullDetailUser(rs.getString("fname"),rs.getString("mname"),rs.getString("lname"),email);
+			
+		}
+		return rm;
+	}
+	public RegModel fullDetailUser(String fname ,String mname, String lname ,String email) throws SQLException {
+		pst = con.prepareStatement("select * from user_details where email=?");
+		RegModel rm=new RegModel();
+		pst.setString(1, email);
+		rs=pst.executeQuery();
+		while(rs.next()) {
+			rm.setFname(fname);
+			rm.setMname(mname);
+			rm.setLname(lname);
+			rm.setEmail(email);
+			rm.setAddress(rs.getString("address"));
+			rm.setPincode(rs.getString("pincode"));
+			rm.setState(rs.getString("state"));
+			rm.setCity(rs.getString("city"));
+			rm.setPhone(rs.getString("phone"));
+			
+	
+		}
+		return rm;
+	}
 	public RegModel ProfileDisplay(String email) throws SQLException {
 		RegModel rm = new RegModel();
 		pst = con.prepareStatement("select * from user_details where email=?");

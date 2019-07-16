@@ -22,15 +22,22 @@
 	
 		<form action="AddProduct" method="post" enctype="multipart/form-data">
 			<h2 class="text-center text-danger">Add New Product</h2><br>
-			<div class="row d-flex d-block">
-			<div class="form-group ml-3">
-				<label for="img">Product Picture</label><br> <input type="file"
-					name="p_pic" multiple="multiple">
-			</div>
-			<div class="form-group">
-				<label for="img">Product Category</label><br> <select
-					name="category">
-					<option value="Other">Other</option>
+			
+		
+		<div class="custom-control-inline">	
+			
+			<div class="custom-file mb-3 ">
+			
+      			<input type="file" class="custom-file-input" id="p_pic" name="p_pic" multiple="multiple">
+      			<label class="custom-file-label" for="p_pic">Choose Product Image file</label>
+    		</div>
+			
+			
+			
+				
+				 <select
+					name="category" class="custom-select mb-3 ml-2">
+					<option >Category of Your Product</option>
 					<option value="Mobile">Mobile</option>
 					<option value="cloths">cloths</option>
 					<option value="watches">watches</option>
@@ -45,7 +52,7 @@
 					<option value="tablet">tablet</option>
 					<option value="laptop">laptop</option>
 				</select>
-			</div>
+			
 			</div>
 			<br>
 			<div class="form-group">
@@ -73,18 +80,40 @@
 					placeholder="Product Brand Name">
 			</div>
 			<div class="form-group">
+
 				<label for="brand">Available Colors</label>
 				<div class="form-inline">
-					<input type="checkbox" class="ml-2 brand_color" id="red" name="red"
-						value="red"><span>Red</span> <input type="checkbox"
-						class="ml-2 brand_color" id="black" name="black" value="black"><span>black</span>
-					<input type="checkbox" class="ml-2 brand_color" id="blue"
-						name="blue" value="blue"><span>blue</span> <input
-						type="checkbox" class="ml-2 brand_color" id="green" name="green"
-						value="green"><span>green</span> <input type="checkbox"
-						class="ml-2 brand_color" id="pink" name="pink" value="pink"><span>pink</span>
-					<input type="checkbox" class="ml-2 brand_color" id="gold"
-						name="gold" value="Gold"><span>Gold</span>
+				
+					<div class="custom-control custom-checkbox mr-1">
+     					 <input type="checkbox" class="custom-control-input" id="red" name="red" value="red">
+      					<label class="custom-control-label" for="red">Red</label>
+    				</div>
+
+    				<div class="custom-control custom-checkbox mr-1">
+    					<input type="checkbox" class="custom-control-input" id="blue" name="blue" value="blue">
+    					<label class="custom-control-label" for="blue">Blue</label>
+    				</div>
+
+    				<div class="custom-control custom-checkbox mr-1">
+    					<input type="checkbox" class="custom-control-input" id="green" name="green" value="green">
+    					<label class="custom-control-label" for="green">Green</label>
+    				</div>
+
+    				<div class="custom-control custom-checkbox mr-1">
+    					<input type="checkbox" class="custom-control-input" id="pink" name="pink" value="pink">
+    					<label class="custom-control-label" for="pink">Pink</label>
+    				</div>
+
+    				<div class="custom-control custom-checkbox mr-1">
+    					<input type="checkbox" class="custom-control-input" id="gold" name="gold" value="gold">
+    					<label class="custom-control-label" for="gold">Gold</label>
+    				</div>
+					
+					<div class="custom-control custom-checkbox mr-1">
+    					<input type="checkbox" class="custom-control-input" id="black" name="black" value="black">
+    					<label class="custom-control-label" for="black">Black</label>
+    				</div>
+					
 				</div>
 			</div>
 			<div class="form-group">

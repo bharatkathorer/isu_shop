@@ -12,12 +12,12 @@
 </head>
 <body onload="onCart()">
 	<%-- navbar Start --%>
-	<input type="hidden" id="u_id" value="${email}">
+	<input type="hidden" id="u_id" value="${user.getEmail()}">
 	<nav class="navbar navbar-expand-lg  bg-dark navbar-dark">
 		
 			<a href="#" class="navbar-brand"> <img
-				src="ProfileDisplay?email=${email}" alt="Plese Login" class="imgs">
-				<span class="ml-2"><span class="acc_name">${email}</span></span>
+				src="ProfileDisplay?email=${user.getEmail()}" alt="Plese Login" class="imgs" onclick="show_account_Img()">
+				<span class="ml-2"><span class="acc_name">${user.getLname()} ${user.getFname()}</span></span>
 			</a>
 			<button class="navbar-toggler">
 				<span class="navbar-toggler-icon" data-toggle="collapse"

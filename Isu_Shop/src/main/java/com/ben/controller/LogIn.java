@@ -12,25 +12,9 @@ import javax.servlet.http.HttpSession;
 import com.ben.dao.AllDao;
 import com.ben.model.RegModel;
 
-/**
- * Servlet implementation class LogIn
- */
 public class LogIn extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public LogIn() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String user,password;
 		user=request.getParameter("u_name");
 		password=request.getParameter("Log_password");
@@ -46,8 +30,10 @@ public class LogIn extends HttpServlet {
 				if(dao.getLogin(rm)) {
 				
 					if(dao.checkFReg(user)) {
+						rm=dao.getName(user);
+						System.out.println(rm);
 						HttpSession session=request.getSession();
-						session.setAttribute("email", user);
+						session.setAttribute("user", rm);
 						response.sendRedirect("home.jsp");
 				}else {
 					response.sendRedirect("fullreg.jsp");
@@ -56,23 +42,12 @@ public class LogIn extends HttpServlet {
 					msg="Invalid creadition!";
 					response.sendRedirect("home.jsp?msg="+msg);
 				}
-				
-			
-			
+
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
-		
-		
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	
 	}
 
 }

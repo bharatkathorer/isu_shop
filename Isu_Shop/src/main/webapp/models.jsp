@@ -9,7 +9,7 @@
 <body>
 	<%-- Registration model start --%>
 	<div class="container mt-5">
-		<div class="modal fade" id="reg_model">
+		<div class="modal fade " id="reg_model">
 			<div class="modal-dialog modal-dialog-scrollable">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -66,6 +66,7 @@
 			</div>
 		</div>
 		<%-- Registration model end --%>
+		
 		<%-- Login Model start --%>
 		<div class="modal fade" id="login_model">
 			<div class="modal-dialog">
@@ -79,7 +80,7 @@
 					<div class="modal-body">
 						<div class="container pb-4">
 
-							<form action="LogIn" method="get">
+							<form action="LogIn" method="post">
 								<div class="form-group">
 									<label for="u_name">Username</label> <input type="email"
 										name="u_name" id="u_name" class="form-control"
@@ -104,6 +105,24 @@
 		</div>
 	</div>
 	<%-- Login Model End --%>
+	
+<!-- 	Show Product Full Image Model start-->
+	<div class="modal fade bg-transparent" id="show_p_img">
+		<div class="modal-dialog modal-lg bg-transparent">
+			<div class="modal-content bg-transparent">
+			
+			
+				<div class="modal-body bg-transparent modal_p_fullimg">
+				
+						<a href="javascript:void(0)" class="close " data-dismiss="modal">&times;</a>
+						<img src="" alt="something went to wrong mt-3" class="p_fullimg img-fluid">
+				
+				</div>
+			</div>
+		</div>
+		
+	</div>
+<!-- 	Show Product Full Image Moel end-->
 
 </body>
 </html>
