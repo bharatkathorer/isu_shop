@@ -4,22 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Product Full Details</title>
-<%@include file="links.jsp"%>
-<%@include file="javascript.jsp"%>
-<%@include file="style.jsp"%>
-</head>
-<body onload="onCart()">
-	<%@include file="navbar.jsp"%>
-	<%@include file="models.jsp"%>
-	<br>
-	<br>
-	<br>
-	<input type="hidden" id="u_id" value="${user.getEmail()}">
-	<div class="card card-body m-1">
 
+</head>
+<body>
+	<div class="card card-body m-1">
 		<div class="row">
-			<div class="col-lg-5 col-xl-4 col-md-6 col-sm-12 col-12 ">
+			<div class="col-lg-5 col-xl-4 col-md-6 col-sm-12 col-12 mb-3">
 				<img alt="profle" src="ProductImg?id=${pid.getId()}"
 					class="img-thumbnail mt-3 ml3 pimgid">
 			</div>
@@ -178,8 +168,7 @@
 			<h5 class="text-black" >
 				<i class="fa fa-shopping-cart mr-1"></i>Cart
 			</h5>
-					
-			
+						
 		</div>
 	</div>
 

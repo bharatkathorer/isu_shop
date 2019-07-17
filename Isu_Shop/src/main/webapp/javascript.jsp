@@ -13,8 +13,73 @@
 			$('.reg').css('display', 'none');
 		});
 		
+		$('#account').click(function(){
+			var uid=$('#u_id').val();
+			if(uid!=''){
+			$.ajax({
+				url:'account.jsp',
+				type:'get',
+				success:function(data,stat){
+					$('#prod').html(data);
+					$('#fid').css('display','block');
+				}	
+			});
+			}
+			else{
+				$('#login_model').modal(1);
+			}
+		});	
+		
+		$('#cart_btn').click(function(){
+			$.ajax({
+				url:'cart_items.jsp',
+				type:'get',
+				success:function(data,sta){
+					$('#prod').html(data);
+					$('#fid').css('display','block');
+				}
+			});
+					
+		});
+		$('#signout_btn').click(function(){
+			$.ajax({
+				url:'SignOut',
+				type:'get',
+				success:function(data,sta){
+					prodctsss();
+					location.reload();
+					alert("Sign Out Success!");
+					
+					$('#fid').css('display','block');
+				}
+			});
+		});
+		
+		$('#add_product').click(function(){
+			$.ajax({
+				url:'newproduct.jsp',
+				type:'get',
+				success:function(data,sta){
+					$('#prod').html(data);
+					$('#fid').css('display','none');
+				}
+			});
+		});
+	
 		
 	});
+		
+		function showprod(p_id){
+		
+			$.ajax({
+				url:'ShowProdById?pid='+p_id,
+				type:'get',
+				success:function(data,sta){
+					$('#prod').html(data);
+					$('#fid').css('display','none');
+				}
+			});
+		}
 		
 		function show_product_Img(img){
 			var i="ProductImg?id="+img;
@@ -47,6 +112,7 @@
 				success:function(data,sta){
 					$('#prod').html(data);
 					onCart();
+					$('#fid').css('display','block');
 				}
 			});
 		}
@@ -314,7 +380,7 @@
 		}
 		
 		
-		$('[title="View Full Details"]').tooltip();
+		
 		
 		
 		

@@ -10,7 +10,6 @@
 </head>
 <body>
 	<div class="container-fluid">
-		
 			<div class="row d-flex justify-content-center">
 				<input type="hidden" id="u_id" value="${user.getEmail()}">
 				<c:forEach items="${product}" var="pro">
@@ -28,11 +27,7 @@
 									onclick="love(${pro.getId()})">
 									<span><i class="fa fa-heart" id="${pro.getId()}">${pro.getLove()}</i></span>
 								</button>
-
-
-
 							</div>
-
 							<span onclick="show_product_Img(${pro.getId()})"><img
 								src="ProductImg?id=${pro.getId()}" alt="Plese Login" class="img">
 							</span>
@@ -40,7 +35,6 @@
 							<div class="text-center p-2">
 								<strong>Price :</strong>${pro.getPrice()} Rs.<br>
 							</div>
-
 
 							<p class="bg-success text-white text-center">${pro.getDiscount()}
 								% Discounts</p>
@@ -53,8 +47,9 @@
 									<span><i class="fa fa-thumbs-o-up" id="${pro.getId()}i"></i></span>
 								</button>
 
-								<a href="ShowProdById?pid=${pro.getId()}"
-									class="btn-sm btn btn-outline-success" title="View Full Details" data-placement="bottom"> View Details</a>
+								<a href="javascript:void(0)" onclick="showprod(${pro.getId()})" class="btn-sm btn btn-outline-success" title="View Full Details" data-placement="bottom">
+									 View Details
+								</a>
 
 								<button
 									class="btn btn-sm text-white btn-outline-warning ml-2 btn-like"

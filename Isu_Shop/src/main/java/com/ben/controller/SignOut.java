@@ -32,10 +32,8 @@ public class SignOut extends HttpServlet {
 		String msg=" SignOut !";
 	
 		HttpSession session=request.getSession();
-		session.getAttribute("email");
+		session.getAttribute("user");
 		session.invalidate();
-		response.sendRedirect("home.jsp?msg="+msg);
-	
 	}
 
 	/**

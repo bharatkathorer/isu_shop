@@ -15,20 +15,21 @@
 <%@include file="models.jsp"%>
 	<br>
 	<br>
-<div class="container p-3 text-success">
+<div class="ml3 text-success">
 	<br> ${param.msg}
 </div>
-	
+<input type="hidden" id="u_id" value="${user.getEmail()}">
 <div id="prod">	
 </div>
 <div class="tt">
 </div>
 
+
+<div id="fid">
 <%@include file="footer.jsp"%>
+</div>
 	
-	<script type="text/javascript">
-	prodctsss();
-	</script>
+	
 
 </body>
 </html>

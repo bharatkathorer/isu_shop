@@ -6,17 +6,12 @@
 <meta charset="ISO-8859-1">
 <title>Add New Products</title>
 
-<%@include file="links.jsp" %>
-<%@include file="javascript.jsp" %>
-<%@include file="style.jsp" %>
 </head>
 <body style="background-color: #666">
 
-	<%@include file="navbar.jsp"%>
-	<%@include file="models.jsp"%>
 	
 	<!-- product details form start -->
-<br><br><br><br>
+
 	<div class="container">
 	<div class="card card-body " style="background-color: #999;color: white;">
 	
@@ -146,6 +141,6 @@
 	</div>
 </div>
 	<!-- product details form end -->
-	<%@include file="footer.jsp"%>
+
 </body>
 </html>
