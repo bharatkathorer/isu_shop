@@ -9,44 +9,45 @@
 <%@include file="javascript.jsp"%>
 <%@include file="style.jsp"%>
 </head>
-<body>
+<body onload="onCart()">
 	<%@include file="navbar.jsp"%>
 	<%@include file="models.jsp"%>
 	<br>
 	<br>
 	<br>
+	<input type="hidden" id="u_id" value="${user.getEmail()}">
 	<div class="card card-body m-1">
 
 		<div class="row">
-			<div class="col-lg-4 col-xl-4 col-md-4 ">
+			<div class="col-lg-5 col-xl-4 col-md-6 col-sm-12 col-12 ">
 				<img alt="profle" src="ProductImg?id=${pid.getId()}"
 					class="img-thumbnail mt-3 ml3 pimgid">
 			</div>
-			<div class="col-lg-8 col-xl-8 col-md-8 ">
+			<div class="col-lg-7 col-xl-8 col-md-6 col-sm-12 col-12">
 				<div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
-					<h2>Product Details</h2>
+					<h2 class="text-primary">Product Details</h2>
 					<table>
 						<tbody>
 							<tr>
-								<td><span>Price </span></td>
-								<td>: ${pid.getPrice()} Rs</td>
+								<td class="pb-2"><span>Price </span></td>
+								<td class="pb-2">: ${pid.getPrice()} Rs</td>
 							</tr>
 							<br>
 							<tr>
-								<td><span>Discount </span></td>
-								<td>: ${pid.getDiscount()} %</td>
+								<td class="pb-2"><span>Discount </span></td>
+								<td class="pb-2">: ${pid.getDiscount()} %</td>
 							</tr>
 							<tr>
-								<td><span>Product Name </span></td>
-								<td>: ${pid.getP_name()}</td>
+								<td class="pb-2"><span>Product Name </span></td>
+								<td class="pb-2">: ${pid.getP_name()}</td>
 							</tr>
 							<tr>
-								<td><span>Brand </span></td>
-								<td>: ${pid.getBrand()}</td>
+								<td class="pb-2"><span>Brand </span></td>
+								<td class="pb-2">: ${pid.getBrand()}</td>
 							</tr>
 							<tr>
-								<td><span>Avauilable Color </span></td>
-								<td>: ${pid.getColor()}</td>
+								<td class="pb-2"><span>Avauilable Color </span></td>
+								<td class="pb-2">: ${pid.getColor()}</td>
 							</tr>
 						</tbody>
 					</table>
@@ -93,7 +94,7 @@
 								<table>
 									<tbody>
 										<tr>
-											<td><h6 class="text-primery">Details</h6>
+											<td><h6 class="text-primary pb-3 pt-3">Details</h6>
 											<td>
 										</tr>
 										<tr>
@@ -118,15 +119,15 @@
 											<td>: ${pid.getColor()}</td>
 										</tr>
 										<tr>
-											<td><h6 class="text-primery">Warranty Type</h6>
+											<td><h6 class="text-primary pb-3 pt-3">Warranty Type</h6>
 											<td>
 										</tr>
 										<tr>
-											<td><span>Warranty </span></td>
+											<td ><span>Warranty </span></td>
 											<td>: ${pid.getWarranty()}</td>
 										</tr>
 										<tr>
-											<td><h6 class="text-primery">Product Model</h6>
+											<td><h6 class="text-primary pb-3 pt-3">Product Model</h6>
 											<td>
 										</tr>
 										<tr>
@@ -134,7 +135,7 @@
 											<td>: ${pid.getP_modal()}</td>
 										</tr>
 										<tr>
-											<td><h6 class="text-primery">Product Category</h6>
+											<td><h6 class="text-primary pb-3 pt-3">Product Category</h6>
 											<td>
 										</tr>
 										<tr>
@@ -164,17 +165,21 @@
 	<br>
 	<br>
 	<br>
-	<br>
+	<br>	
+	<input type="hidden" id="${pid.getId()}cart" value="0">
 	<div class="buyJumtrone">
 		<div
 			class="f-btn d-flex justify-content-center pt-3 btn btn-outline-warning">
 			<h5 class="text-black">Buy</h5>
 		</div>
 		<div
-			class="s-btn d-flex justify-content-center pt-3 btn btn-outline-warning">
-			<h5 class="text-black">
+		
+			class="s-btn d-flex justify-content-center pt-3 btn btn-outline-warning" onclick="cart(${pid.getId()})" id="${pid.getId()}iba">
+			<h5 class="text-black" >
 				<i class="fa fa-shopping-cart mr-1"></i>Cart
 			</h5>
+					
+			
 		</div>
 	</div>
 

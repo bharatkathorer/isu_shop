@@ -54,12 +54,12 @@
 								</button>
 
 								<a href="ShowProdById?pid=${pro.getId()}"
-									class="btn-sm btn btn-outline-success"> View Details</a>
+									class="btn-sm btn btn-outline-success" title="View Full Details" data-placement="bottom"> View Details</a>
 
 								<button
 									class="btn btn-sm text-white btn-outline-warning ml-2 btn-like"
 									title="Cart" onclick="cart(${pro.getId()})"
-									id="${pro.getId()}ba" value="34" onload="ok()">
+									id="${pro.getId()}ba">
 									<span> <i class="fa fa-shopping-cart text-secondary"></i>
 									</span>
 								</button>

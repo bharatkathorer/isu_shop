@@ -50,6 +50,8 @@
 						
 				</ul>
 			</div>
+			<br>
+			
 		
 	</nav>
 	<%-- navbar end --%>

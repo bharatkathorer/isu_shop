@@ -105,6 +105,11 @@
 					</table>
 				</div>
 			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xl-12  col-12">
+				<div class="justify-containt-center d-flex d-block">
+				<h5>Welcome</h5>
+				</div>
+			</div>
 		</div>
 	</div>
 	<%-- Jumbotron means footer form End --%>

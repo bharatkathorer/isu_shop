@@ -4,6 +4,12 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+.navb_two{
+overflow: auto;
+white-space: nowrap;
+}
+
+
 
 	.imgs{
 	height: 50px;
