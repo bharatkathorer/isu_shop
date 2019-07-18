@@ -41,7 +41,7 @@
 					<li class="navbar-item"><a href="#" title=""
 						class="nav-link " id="order"><i class="fa fa-wpforms mr-1" ></i>Orders</a></li>
 					
-					<li class="navbar-item" id='cart_btn'>
+					<li class="navbar-item" id='cart_btn' onclick="cartBtn()">
 						<a href="javascript:void(0)" title="" class="nav-link" id="cart_product">
 						<span class="badge" id="cart_val"></span>
 						<i class="fa fa-shopping-cart fa-1x mr-1"></i>Cart</a>

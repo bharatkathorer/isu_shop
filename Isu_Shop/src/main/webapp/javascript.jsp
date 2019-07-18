@@ -30,36 +30,7 @@
 			}
 		});	
 		
-		$('#cart_btn').click(function(){
-			var uid=$('#u_id').val();
-			var cart_val=$('#cart_val').html();
-			
-			if(uid!=''){
-				$.ajax({
-					url:'CartProduct?uid='+uid,
-					type:'get',
-					success:function(data,sta){
-
-					$.ajax({
-						url:'cart_items.jsp',
-						type:'get',
-						success:function(data,sta){
-							
-							$('#prod').html(data);
-							$('#fid').css('display','block');
-							$('#cart_head').html("Cart("+cart_val+")");
-							$('#carted_price_item').html("Price ("+cart_val+" items)");
-						}
-					});
-					}
-				});
-				
-			
-			}else{
-				$('#login_model').modal(1);
-			}
-					
-		});
+	
 		$('#signout_btn').click(function(){
 		
 			var uid=$('#u_id').val();
@@ -90,6 +61,43 @@
 	
 		
 	});
+		
+		function cartBtn(){
+			var uid=$('#u_id').val();
+			var cart_val=$('#cart_val').html();
+			
+			if(uid!=''){
+				$.ajax({
+					url:'CartProduct?uid='+uid,
+					type:'get',
+					success:function(data,sta){
+
+					$.ajax({
+						url:'cart_items.jsp',
+						type:'get',
+						success:function(data,sta){
+							
+							$('#prod').html(data);
+							$('#fid').css('display','block');
+							$('#cart_head').html("Cart("+cart_val+")");
+							$('#carted_price_item').html("Price ("+cart_val+" items)");
+						}
+					});
+					}
+				});
+				
+			
+			}else{
+				$('#login_model').modal(1);
+			}
+					
+		}
+		
+		function Cart_remove(id){
+			cart(id);
+			
+		}
+		
 		function showprod(p_id){
 		
 			$.ajax({
@@ -198,6 +206,9 @@
 					success:function(data,sta){
 					
 						if(data=='done'){
+							var cr=$('#c_r').val();
+							
+							
 							nav_cart--;
 							if(nav_cart==0){
 								$('#cart_val').html('');
@@ -216,6 +227,9 @@
 								title: 'Cart'
 							});
 							$(cart).val('0');
+							if(cr==2){
+								cartBtn();
+							}
 						}
 					}
 				});
@@ -231,7 +245,10 @@
 					},
 					success:function(data,sta){
 						
+						
 						if(data=='done'){
+							
+							
 							$(cart).val('1');
 							nav_cart++;
 							$('#cart_val').html(nav_cart);
