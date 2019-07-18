@@ -35,10 +35,10 @@ public class CartProduct extends HttpServlet {
 			String job=gson.toJson(cm);
 			pw.println(job);
 			
-		
+			
 			HttpSession se=request.getSession();
-		se.setAttribute("cart", job);
-
+			se.setAttribute("cart_items", cm);
+			
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

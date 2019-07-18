@@ -108,14 +108,14 @@
 	
 <!-- 	Show Product Full Image Model start-->
 	<div class="modal fade bg-transparent" id="show_p_img">
-		<div class="modal-dialog modal-lg bg-transparent">
+		<div class="modal-dialog modal-lg bg-transparent text-white">
 			<div class="modal-content bg-transparent">
 			
 			
 				<div class="modal-body bg-transparent modal_p_fullimg">
 				
 						<a href="javascript:void(0)" class="close " data-dismiss="modal">&times;</a>
-						<img src="" alt="something went to wrong mt-3" class="p_fullimg img-fluid">
+						<img src="" alt="something went to wrong" class="p_fullimg img-fluid mt-3">
 				
 				</div>
 			</div>

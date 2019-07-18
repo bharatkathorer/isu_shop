@@ -1,30 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<%@include file="links.jsp" %>
-<%@include file="javascript.jsp" %>
-<%@include file="style.jsp" %>
+
+
 
 </head>
 <body>
-<%@include file="navbar.jsp"%>
-<%@include file="models.jsp"%>
-	<br>
-	<br>
-	
-	<div class="container p-3 text-success">
-		<br> ${param.msg}
-	</div>
-	
-	<div id="prod">	
-	</div>
-	<div class="tt">
-	</div>
+<c:redirect url="home.jsp"></c:redirect>
 
-<%@include file="footer.jsp"%>
 </body>
 </html>

@@ -12,8 +12,8 @@
 	
 	<!-- product details form start -->
 
-	<div class="container">
-	<div class="card card-body " style="background-color: #999;color: white;">
+	<div class="card card-body ml-1 mr-1">
+	
 	
 		<form action="AddProduct" method="post" enctype="multipart/form-data">
 			<h2 class="text-center text-danger">Add New Product</h2><br>
@@ -24,7 +24,7 @@
 			<div class="custom-file mb-3 ">
 			
       			<input type="file" class="custom-file-input" id="p_pic" name="p_pic" multiple="multiple">
-      			<label class="custom-file-label" for="p_pic">Choose Product Image file</label>
+      			<label class="custom-file-label overflow-hidden" for="p_pic">Choose Image</label>
     		</div>
 			
 			
@@ -115,8 +115,8 @@
 				<label for="">Waranty of product</label>
 				<div class="form-inline">
 					<input type="text" class="form-control" name="warranty"
-						id="warranty" placeholder="How Many Waranty"> <select
-						name="warranty_years" class="mr-2 p-1">
+						id="warranty" placeholder="How Many Waranty"> 
+						<select name="warranty_years" class="custom-select mr-2 p-1">
 						<option value="day">day</option>
 						<option value="month">month</option>
 						<option value="year">year</option>
@@ -138,7 +138,7 @@
 			<button type="submit" class="btn btn-success">AddProduct</button>
 
 		</form>
-	</div>
+	
 </div>
 	<!-- product details form end -->
 

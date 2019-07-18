@@ -1,14 +1,38 @@
 
 <style type="text/css">
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    -webkit-box-shadow: inset 0 0 6px #333; 
+}
+
+
 *{
+	margin:0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+#card_prod_img{
+border-radius:3px;
+height:70px!important;
+width: 20!important; 
+background-size:cover;
+align-items: center ;
 }
 .navb_two{
 overflow: auto;
 white-space: nowrap;
 }
-
 
 
 	.imgs{

@@ -32,6 +32,7 @@
 						class="nav-link " data-toggle="modal" data-target="#login_model"><i class="fa fa-unlock mr-1"></i>Login</a></li>
 					<li class="navbar-item"><a href="javascript:void(0)" title=""
 						class="nav-link " data-toggle="modal" data-target="#reg_model"><i class="fa fa-user-plus mr-1"></i>Add User</a></li>
+					
 					<li class="navbar-item"><a href="javascrip:void(0)" title=""
 						class="nav-link " id="signout_btn"><i class="fa fa-user-times mr-1"></i>SignOut</a></li>
 					

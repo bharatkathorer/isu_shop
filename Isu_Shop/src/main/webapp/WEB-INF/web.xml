@@ -88,6 +88,12 @@
   	<description></description>
   	<servlet-class>com.ben.controller.ShowLikes</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>CartItems</servlet-name>
+  	<display-name>CartItems</display-name>
+  	<description></description>
+  	<servlet-class>com.ben.controller2.CartItems</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Registration</servlet-name>
   	<url-pattern>/Registration</url-pattern>
@@ -143,5 +149,9 @@
   <servlet-mapping>
   	<servlet-name>ShowLikes</servlet-name>
   	<url-pattern>/ShowLikes</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CartItems</servlet-name>
+  	<url-pattern>/CartItems</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -11,7 +11,7 @@ pageEncoding="ISO-8859-1" isELIgnored="false"%>
 		
 		<br>
 		
-		<div class="card card-body mt-4">
+		<div class="card card-body mt-4 ml-1 mr-1">
 			
 			<div class="row d-flex justify-content-center d-block">
 				

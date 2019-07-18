@@ -6,14 +6,13 @@
 <meta charset="ISO-8859-1">
 <title>Home</title>
 <%@include file="links.jsp" %>
-<%@include file="javascript.jsp" %>
+<%@include file="javascript.jsp"%>
 <%@include file="style.jsp" %>
 
 </head>
 <body onload="prodctsss()">
 <%@include file="navbar.jsp"%>
 <%@include file="models.jsp"%>
-	<br>
 	<br>
 <div class="ml3 text-success">
 	<br> ${param.msg}

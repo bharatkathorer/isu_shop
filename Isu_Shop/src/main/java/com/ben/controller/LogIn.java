@@ -31,7 +31,7 @@ public class LogIn extends HttpServlet {
 				
 					if(dao.checkFReg(user)) {
 						rm=dao.getName(user);
-						System.out.println(rm);
+						
 						HttpSession session=request.getSession();
 						session.setAttribute("user", rm);
 						response.sendRedirect("home.jsp");

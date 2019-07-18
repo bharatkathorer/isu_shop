@@ -184,7 +184,7 @@ public class AllDao {
 			pm.setWarranty(rs.getString(10));
 			pm.setMore_info(rs.getString(11));
 			pm.setRating(rs.getString(13));
-
+			
 			pm.setLove(rs.getString(15));
 
 			list.add(pm);
@@ -356,4 +356,11 @@ public class AllDao {
 		return i;
 	}
 	/* Delete like end */
+	
+	public List<ProductModel> showAllCartItem(){
+		List<ProductModel> list =new ArrayList();
+		
+		
+		return list;
+	}
 }

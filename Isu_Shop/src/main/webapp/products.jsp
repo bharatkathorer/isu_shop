@@ -5,8 +5,6 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<%@include file="javascript.jsp"%>
-<%@include file="style.jsp"%>
 </head>
 <body>
 	<div class="container-fluid">
